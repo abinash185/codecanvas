@@ -1,0 +1,23 @@
+.aboutCardContainer {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: var(--theme-red); */
+  border: 4px solid var(--theme-yellow);
+  border-radius: 0.8rem;
+  margin: 1%;
+  padding: 1%;
+  animation: scale linear;
+  animation-timeline: view();
+  animation-range: cover 0% cover 20%;
+}
+
+.aboutCardContainer p {
+  text-align: center;
+  width: 80%;
+
+  /* color: white; */
+}

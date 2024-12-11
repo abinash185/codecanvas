@@ -1,0 +1,112 @@
+.careerCardContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.careerCardContainer div:first-of-type div {
+  display: flex;
+  justify-content: start;
+}
+
+.careerCardContainer div:first-of-type h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.careerCardContainer div:first-of-type div span:nth-of-type(2) {
+  position: relative;
+  margin-left: 1.5rem;
+  font-weight: 300;
+}
+
+.careerCardContainer div:first-of-type div span:nth-of-type(2)::before {
+  content: ".";
+  font-size: 2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+  left: -0.7rem;
+}
+
+/* .careerCardContainer div:nth-of-type(2) button {
+  padding: 0.6rem 1rem;
+  background-color: var(--theme-red);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+} */
+
+/* -------------------------------------Contact btn------------------------------------------------------- */
+#contactBtn {
+  padding: 0.4rem 1.8em;
+  position: relative;
+  border: 1.5px solid black;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+}
+
+#contactBtn::before {
+  content: "";
+  width: 105%;
+  height: 85vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #000000;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+#contactBtn:hover::before {
+  width: 0;
+}
+
+#contactBtn:hover {
+  color: #111;
+  border: 1.5px solid black;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+  .careerCardContainer div:first-of-type div {
+    display: block;
+    text-align: left;
+  }
+
+  .careerCardContainer div:first-of-type h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .careerCardContainer div:first-of-type h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+
+  .careerCardContainer div:first-of-type div {
+    display: block;
+    text-align: left;
+  }
+  .careerCardContainer div:first-of-type div span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .careersContainer section:nth-of-type(2) div {
+    flex-direction: column;
+    align-items: start;
+  }
+}

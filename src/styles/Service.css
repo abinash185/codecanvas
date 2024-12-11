@@ -1,0 +1,115 @@
+.servicesContainer main {
+  margin: 2% auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.servicesContainer header h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  justify-self: start;
+  line-height: 1;
+}
+
+.servicesContainer > header {
+  width: 100%;
+  padding: 5% 15%;
+  background: linear-gradient(45deg, #2596EB, #4e9943);
+  /* background: linear-gradient(45deg, #c00000, #000000); */
+  color: white;
+  /* background-position: -200%;
+  background-size: 400% 400%;
+  background-image: linear-gradient(to right, #c00000, #000000, #c00000);
+  animation: gradientColorAnimation 8s infinite ease-in-out alternate-reverse; */
+}
+
+.servicesContainer header p {
+  flex-basis: 60%;
+  font-size: 20px;
+  text-align: justify;
+}
+.servicesBox {
+  margin: 10% 3%;
+}
+
+.serviceContent,
+.servicesContainer > header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  place-items: center;
+}
+
+.serviceContent .serviceText p {
+  font-size: 18px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.serviceText_left,
+.serviceImage_left,
+.serviceText_left p {
+  justify-self: start;
+  text-align: start;
+  float: left;
+}
+.serviceText_right,
+.serviceImage_right,
+.serviceText_right p {
+  justify-self: end;
+  text-align: end;
+  float: right;
+}
+
+.serviceContent .serviceText h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--theme-red);
+}
+
+.serviceContent .serviceText {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.serviceContent .serviceImage {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .serviceContent,
+  .servicesContainer header {
+    grid-template-columns: 1fr;
+  }
+  .servicesContainer header h1 {
+    font-size: 45px;
+  }
+  .serviceText_right,
+  .serviceText_left {
+    grid-row: 2;
+  }
+  .serviceImage_left,
+  .serviceImage_right {
+    grid-row: 1;
+  }
+  .servicesContainer header p {
+    flex-basis: 60%;
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0px);
+  }
+}

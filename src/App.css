@@ -1,0 +1,87 @@
+.animateText {
+  font-size: 220px;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------- BRAND SLIDER STYLING------------------------------------------------ */
+.maskbrandSlider_after-mask::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    transparent 20%,
+    transparent 80%,
+    #ffffff
+  );
+  pointer-events: none;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: var(--theme-red);
+  font-size: 3rem;
+}
+
+.slick-prev {
+  left: -54px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- BASIC SCROLL ANIMATIONS ------------------------------------------------ */
+
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 0.7;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes revealFromTop {
+  from {
+    background-position-x: 100%;
+  }
+  to {
+    background-position-x: 0%;
+  }
+}
+
+@keyframes gradientColorAnimation {
+  0% {
+    background-position: 0 1600px;
+  }
+
+  to {
+    background-position: 1600px 0;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */

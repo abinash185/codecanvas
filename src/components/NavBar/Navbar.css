@@ -1,0 +1,182 @@
+.navigation {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 100%;
+  position: sticky;
+  top: 0%;
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 99;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1% 5%;
+}
+.brand {
+  line-height: 55px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.comingSoonClass {
+  color: #7a7a7d8f !important;
+  /* pointer-events: none; */
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.comingSoonClass::after {
+  content: "Coming Soon";
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  font-size: 12px;
+  width: max-content;
+  padding: 0 0.5rem;
+  height: max-content;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.comingSoonClass:hover::after {
+  opacity: 1 !important;
+  visibility: visible;
+}
+
+.brand a,
+.brand a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+.brand a img {
+  height: 40px;
+  width: 160px;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  float: right;
+}
+nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 55px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  color: #c00001;
+}
+
+.nav-list li a.active {
+  color: #c00001;
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  position: absolute;
+  top: -5vh;
+  right: 10px;
+  background: transparent;
+}
+
+@media screen and (min-width: 1116px) {
+  .nav-list {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 1115px) {
+  nav {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  #navbar-toggle {
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    z-index: 99;
+  }
+  #navbar-toggle span,
+  #navbar-toggle span:before,
+  #navbar-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: #000000;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+  }
+  #navbar-toggle span:before {
+    top: -10px;
+  }
+  #navbar-toggle span:after {
+    bottom: -10px;
+  }
+  #navbar-toggle.active span {
+    background-color: transparent;
+  }
+  #navbar-toggle.active span:before,
+  #navbar-toggle.active span:after {
+    top: 0;
+  }
+  #navbar-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #navbar-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+}
+
+/* ------------------------------------------------------------ Text Animation -------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */

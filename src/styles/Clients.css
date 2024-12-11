@@ -1,0 +1,33 @@
+.clientsContainer header h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.clientsContainer header {
+  background: linear-gradient(45deg, #c00000, #8b0000);
+  padding: 5%;
+}
+
+.clientsContainer section {
+  margin: 2% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.clientsContainer section img {
+  margin: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .clientsContainer header h1 {
+    font-size: 34px;
+  }
+  .clientsContainer section img {
+    margin: 1rem;
+  }
+
+  .clientsContainer section {
+    margin: 2% 5%;
+  }
+}

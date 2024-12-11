@@ -1,0 +1,78 @@
+.projectContainer {
+  margin: 2% 18%;
+}
+
+.projectVideoBox {
+  width: 100%;
+  margin: 5% 0;
+}
+
+.projectContainer header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  align-items: start;
+}
+.projectContainer header figure {
+  /* height: 30vh; */
+  margin: 1rem;
+}
+.projectContainer header section h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.projectContainer header section p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.projectContainer header figure img {
+  object-fit: contain;
+}
+
+.projectLargeImage {
+  height: 100%;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.ProjectContent_heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1440px) {
+  .projectContainer {
+    margin: 2% 15%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .projectContainer {
+    margin: 2% 10%;
+  }
+
+  .projectContainer header {
+    grid-template-columns: 1fr;
+  }
+
+  .projectContainer header figure {
+    grid-row: 2/3;
+  }
+  .projectContainer header section {
+    grid-row: 1/2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projectContainer header section h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  .ProjectContent_heading {
+    font-size: 1.5rem;
+  }
+
+  .projectContainer header section p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}

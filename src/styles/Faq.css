@@ -1,0 +1,19 @@
+.faqContainer .hs-accordion-group {
+  margin: 2% 20%;
+}
+
+.faqHeader {
+  background: #2596be;
+  padding: 5%;
+  color: white;
+}
+
+.faqHeader h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  text-align: center;
+}
+.faqHeader p {
+  font-size: 1.5rem;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+.testimonialCard figure > div:first-of-type img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonialCard figure > div:first-of-type {
+  margin-right: 5%;
+}
+
+.testimonialCard figure > div:nth-of-type(2) h2:first-of-type {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.testimonialCard figure > div:nth-of-type(2) h2:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 700;
+  color: red;
+}
+
+.testimonialCard figure > div:nth-of-type(2) p {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.testimonialCard figure {
+  display: flex;
+  justify-content: start;
+}
+
+.testimonialCard {
+  width: 100%;
+  border-radius: 15px;
+  padding: 5%;
+  background-color: #fff6ad;
+}
+
+.testimonialCard h1 {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.testimonialCard > p {
+  font-size: 16px;
+  margin: 5% 0% 3%;
+}

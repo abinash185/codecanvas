@@ -1,0 +1,105 @@
+.workContainer {
+  height: 100%;
+}
+.workContainer header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 5%;
+  background: linear-gradient(45deg, #c00000, #8b0000);
+  color: white;
+}
+
+.workContainer .workNavbar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.workContainer .workNavbar span {
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 1%;
+}
+.workContainer .workNavbar span:hover {
+  color: var(--theme-red);
+}
+
+.workContainer header h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.workContainer header p {
+  font-size: 20px;
+  font-weight: 400;
+  width: 70%;
+  justify-self: start;
+}
+
+.workNavbar .active {
+  color: var(--theme-red);
+}
+
+.workCardStyle {
+  object-fit: cover;
+}
+.workCardStyle img:hover {
+  -webkit-filter: brightness(100%);
+}
+.workCardStyle img {
+  max-height: 400px;
+  height: 100%;
+  cursor: pointer;
+  padding: 1rem;
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 500ms ease;
+}
+
+.workCardContainer > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, auto));
+  justify-items: start;
+  margin: 0% 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .workContainer header {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .workContainer header h1 {
+    line-height: normal;
+  }
+
+  .workContainer header p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .workContainer header h1 {
+    font-size: 45px;
+  }
+  .workContainer header p {
+    font-size: 16px;
+  }
+  .workContainer .workNavbar {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .workCardContainer div {
+    justify-items: center;
+  }
+}
